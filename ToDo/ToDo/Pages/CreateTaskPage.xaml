@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDo.Pages.CreateTaskPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+
+                <Entry x:Name="taskName" Placeholder="Enter Task Name" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+                
+                <Label VerticalTextAlignment="End" FontSize="Medium" Text="Start Date" Grid.Row="1" Grid.Column="0" />
+                <DatePicker x:Name="startDate" Grid.Row="1" Grid.Column="1" />
+                
+                <Label VerticalTextAlignment="End" FontSize="Medium" Text="End Date" Grid.Row="2" Grid.Column="0" />
+                <DatePicker x:Name="endDate" Grid.Row="2" Grid.Column="1" />
+
+                <Label VerticalTextAlignment="End" FontSize="Medium" Text="Description" Grid.Row="3" Grid.Column="0" />
+                <Editor x:Name="taskDescription" Grid.Row="3" Grid.Column="1" />
+
+                <Button x:Name="createTaskBtn" Text="Create" Grid.Row="4" Grid.Column="1" Clicked="createTaskBtn_Clicked" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
